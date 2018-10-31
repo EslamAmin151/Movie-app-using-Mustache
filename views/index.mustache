@@ -1,0 +1,34 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/myamazingwebsite/site.css" />
+</head>
+
+<body>
+
+  <ul>
+
+    <li>
+
+    <form action="/add-movies" method="POST">
+      <input name="title" placeholder="Enter movie title">
+      <input name="descripton" placeholder="Enter descripton">
+      <input name="genre" placeholder="Enter movie genre">
+      <input name="postURL" placeholder="Enter movie poster url">
+      <input type="submit">
+    </form>
+    </li>
+  </ul>
+
+    {{#movies}}
+    <form action="/delete-trip" method="POST">
+     <input type="hidden" name="title" value="{{title}}"/>
+     <input type="submit" value="Remove" />
+      {{title}}
+      {{description}}
+      {{genre}}
+      <img src="{{postURL}}">
+    </form>
+    {{/movies}}
+
+</body>
+</html>
